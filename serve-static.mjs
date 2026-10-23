@@ -29,7 +29,17 @@ createServer(async (request, response) => {
       return;
     }
 
-    const fileStat = await stat(filePath).catch(() => null);
+    let fileStat = await stat(filePath).catch(() => null);
+    if (!fileStat && !path.extname(filePath)) {
+      const htmlPath = `${filePath}.html`;
+      const htmlStat = await stat(htmlPath).catch(() => null);
+
+      if (htmlStat?.isFile()) {
+        filePath = htmlPath;
+        fileStat = htmlStat;
+      }
+    }
+
     if (fileStat?.isDirectory()) {
       filePath = path.join(filePath, "index.html");
     }
@@ -45,5 +55,5 @@ createServer(async (request, response) => {
     response.end("Not found");
   }
 }).listen(port, "127.0.0.1", () => {
-  console.log(`Digital Foundation on http://127.0.0.1:${port}`);
+  console.log(`OMAI on http://127.0.0.1:${port}`);
 });

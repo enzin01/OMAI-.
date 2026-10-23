@@ -1,6 +1,6 @@
-# Digital Foundation
+# OMAI
 
-Site institucional premium, pronto para usar como link principal na bio do Instagram.
+Site da OMAI, pronto para usar como link principal na bio do Instagram.
 
 ## Como publicar
 
@@ -13,7 +13,7 @@ Site institucional premium, pronto para usar como link principal na bio do Insta
 
 Todos os botões principais usam o número `1199551-2411` com mensagem automática:
 
-`Olá, vim pelo site da Digital Foundation e quero solicitar um orçamento para meu projeto digital.`
+`Olá, vim pelo site da OMAI e quero entender como um site pode ajudar meu negócio.`
 
 ## Preview local
 
@@ -24,3 +24,11 @@ npm run preview
 ```
 
 O site abre em `http://127.0.0.1:3000`.
+
+## Repositório e hospedagem
+
+O repositório original foi renomeado para [enzin01/OMAI-.](https://github.com/enzin01/OMAI-.), mantendo o ID `1299813621` e seu histórico.
+
+A hospedagem principal continua no projeto Vercel `omai`, ID `prj_UEkzngRAYghxAOkQJ1R9FEERdpwK`, da equipe `enzo-rivaroli`. O domínio de produção existente é [digital-foundation-beryl.vercel.app](https://digital-foundation-beryl.vercel.app).
+
+As pastas `app`, `components` e `public` contêm o código completo do site existente. Nenhuma credencial ou pasta de build deve ser versionada.

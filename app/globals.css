@@ -6916,6 +6916,7 @@ body {
 
 .hero.short-hero .hero-content.compact {
   width: min(100%, 1080px);
+  transform: none;
   min-height: auto;
   justify-content: center;
   gap: clamp(20px, 3vh, 34px);

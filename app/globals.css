@@ -6009,7 +6009,7 @@ body::after {
   text-shadow: none;
 }
 
-/* Header logo from the original brand artwork */
+/* Official OMAI artwork supplied by the owner */
 .brand-logo-wrap {
   position: relative;
   display: grid;
@@ -6024,7 +6024,7 @@ body::after {
   width: 62px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(var(--accent-rgb), 0.42)) hue-rotate(195deg);
+  filter: drop-shadow(0 0 10px rgba(var(--accent-rgb), 0.42));
 }
 
 .brand > span:last-child {

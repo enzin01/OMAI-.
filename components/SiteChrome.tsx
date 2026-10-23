@@ -127,10 +127,10 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
           <span className="brand-logo-wrap" aria-hidden="true">
             <Image
               className="brand-logo"
-              src="/assets/digital-foundation-logo-mark.png"
+              src="/assets/omai-logo.svg"
               alt=""
-              width={174}
-              height={104}
+              width={1112}
+              height={744}
               priority
             />
           </span>

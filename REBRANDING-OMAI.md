@@ -61,7 +61,7 @@ Não foi feito envio real do formulário por e-mail ou de mensagens pelo WhatsAp
 ## Pendências e problemas preexistentes
 
 - A pendência do monograma DF foi resolvida em 23/10/2026 com a logo enviada pelo proprietário em PNG. O arquivo foi incorporado sem redesenho ao asset SVG `public/assets/omai-logo.svg`, com ajuste de contraste para o fundo escuro. Cabeçalho, favicon e ícone de instalação usam a arte OMAI. Não foi anexado um PDF nesta atualização.
-- O endereço com a marca passa a ser `https://omai-enzo-rivaroli.vercel.app`. O domínio curto `omai.vercel.app` está atribuído a outro projeto. Os endereços antigos continuam funcionando no mesmo projeto Vercel e no mesmo repositório GitHub. URL canônica, Open Graph, robots e sitemap foram atualizados para o endereço OMAI.
+- O endereço com a marca passa a ser `https://omai-agencia.vercel.app`. O domínio curto `omai.vercel.app` está atribuído a outro projeto. Os endereços antigos continuam funcionando no mesmo projeto Vercel e no mesmo repositório GitHub. URL canônica, Open Graph, robots e sitemap foram atualizados para o endereço OMAI.
 - Na home original em 1.440 px, o hero já começava em **x = -84 px**, com largura de documento de **1.520 px**, causando corte à esquerda e overflow. No tablet de 768 px, a largura original também já chegava a **774 px**. A comparação antes/depois confirmou esses problemas, que não foram corrigidos por estarem fora do escopo.
 - A instalação apontou **sete vulnerabilidades preexistentes: seis altas e uma crítica**. Nenhuma atualização de dependências foi feita, conforme o briefing.
 

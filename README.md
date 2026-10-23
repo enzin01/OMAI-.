@@ -29,6 +29,6 @@ O site abre em `http://127.0.0.1:3000`.
 
 O repositório original foi renomeado para [enzin01/OMAI-.](https://github.com/enzin01/OMAI-.), mantendo o ID `1299813621` e seu histórico.
 
-A hospedagem principal continua no projeto Vercel `omai`, ID `prj_UEkzngRAYghxAOkQJ1R9FEERdpwK`, da equipe `enzo-rivaroli`. O endereço com a marca é [omai-enzo-rivaroli.vercel.app](https://omai-enzo-rivaroli.vercel.app). O endereço anterior [digital-foundation-beryl.vercel.app](https://digital-foundation-beryl.vercel.app) permanece disponível.
+A hospedagem principal continua no projeto Vercel `omai`, ID `prj_UEkzngRAYghxAOkQJ1R9FEERdpwK`, da equipe `enzo-rivaroli`. O endereço com a marca é [omai-agencia.vercel.app](https://omai-agencia.vercel.app). O endereço anterior [digital-foundation-beryl.vercel.app](https://digital-foundation-beryl.vercel.app) permanece disponível.
 
 As pastas `app`, `components` e `public` contêm o código completo do site existente. Nenhuma credencial ou pasta de build deve ser versionada.

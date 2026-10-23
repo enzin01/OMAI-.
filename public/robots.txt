@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://omai-enzo-rivaroli.vercel.app/sitemap.xml
+Sitemap: https://omai-agencia.vercel.app/sitemap.xml

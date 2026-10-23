@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://digitalfoundation.com.br/sitemap.xml
+Sitemap: https://omai-enzo-rivaroli.vercel.app/sitemap.xml

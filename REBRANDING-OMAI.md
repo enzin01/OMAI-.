@@ -60,10 +60,9 @@ Não foi feito envio real do formulário por e-mail ou de mensagens pelo WhatsAp
 
 ## Pendências e problemas preexistentes
 
-- `public/assets/digital-foundation-logo-mark.png` contém o monograma **DF incorporado à imagem**. O desenho foi preservado e apenas sua matiz de exibição foi adaptada. É necessário o arquivo oficial da OMAI para eliminar essa referência visual sem improvisar um logo.
-- Os glifos vetoriais de `public/favicon.svg` e `public/apple-touch-icon.svg` também mantêm o desenho da identidade anterior. Receberam as novas cores e o nome acessível OMAI; aguardam a arte oficial dos ícones.
-- A marca textual do cabeçalho já ficava oculta no layout mobile original. Essa regra foi preservada; por isso, no celular o logo antigo continua visível até a entrega do asset oficial.
+- A pendência do monograma DF foi resolvida em 23/10/2026 com a logo enviada pelo proprietário em PNG. O arquivo foi incorporado sem redesenho ao asset SVG `public/assets/omai-logo.svg`, com ajuste de contraste para o fundo escuro. Cabeçalho, favicon e ícone de instalação usam a arte OMAI. Não foi anexado um PDF nesta atualização.
+- O endereço com a marca passa a ser `https://omai-enzo-rivaroli.vercel.app`. O domínio curto `omai.vercel.app` está atribuído a outro projeto. Os endereços antigos continuam funcionando no mesmo projeto Vercel e no mesmo repositório GitHub. URL canônica, Open Graph, robots e sitemap foram atualizados para o endereço OMAI.
 - Na home original em 1.440 px, o hero já começava em **x = -84 px**, com largura de documento de **1.520 px**, causando corte à esquerda e overflow. No tablet de 768 px, a largura original também já chegava a **774 px**. A comparação antes/depois confirmou esses problemas, que não foram corrigidos por estarem fora do escopo.
 - A instalação apontou **sete vulnerabilidades preexistentes: seis altas e uma crítica**. Nenhuma atualização de dependências foi feita, conforme o briefing.
 
-O endereço existente e as permissões de acesso do site devem permanecer os mesmos na publicação.
+As permissões de acesso do projeto foram preservadas. A adição do endereço OMAI e a troca do logo foram solicitadas pelo proprietário depois do rebranding inicial.

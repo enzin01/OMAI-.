@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="OMAI">
+  <rect width="64" height="64" rx="14" fill="#0b0b0d"/>
+  <rect x="7" y="7" width="50" height="50" rx="11" fill="#18181c" stroke="#f5c518" stroke-opacity=".68" stroke-width="2"/>
+  <path d="M17 21h12c7.3 0 12.4 4.8 12.4 11s-5.1 11-12.4 11H17V21Zm8.2 7.1v7.8h3.7c2.7 0 4.4-1.5 4.4-3.9s-1.7-3.9-4.4-3.9h-3.7Z" fill="#f5f5f7"/>
+  <path d="M42 21h8v22h-8V21Z" fill="#f5c518"/>
+</svg>

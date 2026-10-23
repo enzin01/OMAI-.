@@ -9502,3 +9502,60 @@ body:has(.briefing-page) .menu-button {
     min-height: 50px;
   }
 }
+
+/* Secondary blue details; primary surfaces and actions retain black and yellow. */
+.hero.short-hero .button-secondary {
+  border-color: rgba(var(--blue-rgb), 0.65);
+}
+
+.hero.short-hero .button-secondary svg,
+.site-header .menu-button svg {
+  color: var(--blue-2);
+}
+
+.hero-showcase .chip-strategy {
+  border-color: rgba(var(--blue-rgb), 0.65);
+}
+
+.hero-showcase .chip-strategy svg {
+  color: var(--blue-2);
+  filter: drop-shadow(0 0 10px rgba(var(--blue-rgb), 0.45));
+}
+
+.hero-showcase .energy-line-three {
+  filter: drop-shadow(0 0 10px rgba(var(--blue-rgb), 0.55));
+}
+
+.experience-tile:nth-child(2),
+.experience-tile:nth-child(2):hover,
+.first-answer .benefit-card:nth-child(3),
+.question-section .answer-card:nth-child(2),
+.service-grid .service-card:nth-child(3n + 2) {
+  border-color: rgba(var(--blue-rgb), 0.5);
+}
+
+.experience-tile:nth-child(2) span {
+  color: var(--blue-2);
+  background: rgba(var(--blue-rgb), 0.1);
+}
+
+.first-answer .benefit-card:nth-child(3) > svg,
+.question-section .answer-card:nth-child(2) > svg,
+.service-grid .service-card:nth-child(3n + 2) > svg {
+  color: var(--blue-2);
+  filter: drop-shadow(0 8px 18px rgba(var(--blue-rgb), 0.24));
+}
+
+.experience-lab-copy > .eyebrow,
+.page-hero-copy > .eyebrow {
+  color: var(--blue-2);
+}
+
+.page-hero-visual .badge-top,
+.page-hero-visual .visual-ring {
+  border-color: rgba(var(--blue-rgb), 0.55);
+}
+
+.page-hero-visual .badge-top {
+  color: var(--blue-2);
+}

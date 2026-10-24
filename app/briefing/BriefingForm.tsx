@@ -1,6 +1,6 @@
 "use client";
 
-import type { CSSProperties, ChangeEvent, FormEvent } from "react";
+import type { ChangeEvent, FormEvent } from "react";
 import { useEffect, useMemo, useState } from "react";
 import type { LucideIcon } from "lucide-react";
 import {

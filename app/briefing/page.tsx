@@ -1,20 +1,16 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { PageSeo } from "@/components/PageSeo";
 import { SiteChrome } from "@/components/SiteChrome";
 import { BriefingForm } from "./BriefingForm";
 
-export const metadata: Metadata = {
-  title: "Briefing para site personalizado",
-  description:
-    "Formulario completo de briefing da OMAI para criar sites personalizados com estrategia, identidade, conteudo e funcionalidades bem definidos.",
-  alternates: {
-    canonical: "/briefing"
-  }
-};
+
+export const metadata = pageMetadata("/briefing");
 
 export default function BriefingPage() {
   return (
     <SiteChrome>
       <main className="briefing-page" id="top">
+        <PageSeo path="/briefing" />
         <BriefingForm />
       </main>
     </SiteChrome>

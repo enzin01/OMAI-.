@@ -1,11 +1,16 @@
+import { pageMetadata } from "@/lib/seo";
+import { PageSeo } from "@/components/PageSeo";
 import { FinalCall, PageHero, SectionIntro } from "@/components/PagePieces";
 import { SiteChrome } from "@/components/SiteChrome";
 import { services } from "@/components/site-data";
+
+export const metadata = pageMetadata("/servicos");
 
 export default function ServicesPage() {
   return (
     <SiteChrome>
       <main>
+        <PageSeo path="/servicos" />
         <PageHero
           eyebrow="Serviços"
           title="Sua empresa precisa ser fácil de entender e fácil de contratar."
@@ -25,7 +30,7 @@ export default function ServicesPage() {
               return (
                 <article className="service-card reveal" key={service.title} style={{ transitionDelay: `${index * 80}ms` }}>
                   <Icon size={28} aria-hidden="true" />
-                  <h2>{service.title}</h2>
+                  <h3>{service.title}</h3>
                   <p>{service.text}</p>
                   <strong>{service.details}</strong>
                 </article>

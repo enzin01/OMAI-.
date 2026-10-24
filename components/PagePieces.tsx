@@ -16,7 +16,7 @@ export function PageHero({
 }) {
   return (
     <section className="page-hero">
-      <div className="page-hero-copy reveal">
+      <div className="page-hero-copy">
         <p className="eyebrow">{eyebrow}</p>
         <h1>{title}</h1>
         <p>{text}</p>
@@ -25,8 +25,8 @@ export function PageHero({
           {cta}
         </a>
       </div>
-      <div className="page-hero-visual reveal" aria-hidden="true">
-        <Image src="/assets/digital-foundation-hero.png" alt="" fill sizes="(max-width: 900px) 100vw, 45vw" />
+      <div className="page-hero-visual" aria-hidden="true">
+        <Image src="/assets/digital-foundation-hero.png" alt="" fill priority fetchPriority="high" sizes="(max-width: 900px) 100vw, 45vw" />
         <div className="visual-badge badge-top">Mais clareza</div>
         <div className="visual-badge badge-bottom">Mais confiança</div>
         <div className="visual-ring" />
@@ -67,6 +67,11 @@ export function FinalCall() {
           <MessageCircle size={20} aria-hidden="true" />
           Chamar no WhatsApp
         </a>
+        <p className="context-links">
+          <Link href="/servicos">Conheça os serviços</Link>{" · "}
+          <Link href="/como-funciona">Entenda o processo</Link>{" · "}
+          <Link href="/contato">Fale com a OMAI</Link>
+        </p>
       </div>
     </section>
   );

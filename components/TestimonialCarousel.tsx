@@ -186,13 +186,13 @@ export function TestimonialCarousel({ testimonials }: { testimonials: Testimonia
             <article className="testimonial-card" key={`${copy}-${item.name}`} aria-hidden={copy !== 1 ? true : undefined}>
               <div className="testimonial-top">
                 <strong>{item.name}</strong>
-                <Image className="google-mark" src="/assets/google-review-icon-transparent.png" alt={copy === 1 ? "Google" : ""} width={25} height={25} draggable={false} />
+                <Image unoptimized className="google-mark" src="/assets/google-review-icon-transparent.webp" alt={copy === 1 ? "Google" : ""} width={25} height={25} draggable={false} />
               </div>
               <div className="testimonial-stars" aria-label={copy === 1 ? "5 estrelas" : undefined}>
                 {Array.from({ length: 5 }, (_, star) => (
                   <Star key={star} size={17} fill="currentColor" aria-hidden="true" />
                 ))}
-                <Image className="verified-mark" src="/assets/verified-review-icon-transparent.png" alt={copy === 1 ? "Verificado" : ""} width={17} height={17} draggable={false} />
+                <Image unoptimized className="verified-mark" src="/assets/verified-review-icon-transparent.webp" alt={copy === 1 ? "Verificado" : ""} width={17} height={17} draggable={false} />
               </div>
               <p>{item.text}</p>
               <small>Leia mais</small>

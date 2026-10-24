@@ -31,6 +31,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
+            (entry.target as HTMLElement).removeAttribute("data-reveal");
             observer.unobserve(entry.target);
           }
         });
@@ -38,8 +39,18 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
       { threshold: 0.12, rootMargin: "0px 0px -50px 0px" }
     );
 
-    elements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    elements.forEach((element) => {
+      // Conteúdo visível no HTML inicial; animação somente abaixo da primeira tela.
+      if (!reducedMotion && element.getBoundingClientRect().top > window.innerHeight) {
+        element.dataset.reveal = "pending";
+      }
+      observer.observe(element);
+    });
+    return () => {
+      observer.disconnect();
+      elements.forEach((element) => element.removeAttribute("data-reveal"));
+    };
   }, [pathname]);
 
   useEffect(() => {
@@ -126,6 +137,7 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
         <Link className="brand" href="/" aria-label="OMAI">
           <span className="brand-logo-wrap" aria-hidden="true">
             <Image
+              unoptimized
               className="brand-logo"
               src="/assets/omai-logo.svg"
               alt=""
@@ -166,6 +178,12 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </header>
+
+      <noscript>
+        <nav className="no-js-nav" aria-label="Navegação sem JavaScript">
+          {navItems.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
+        </nav>
+      </noscript>
 
       <div className="page-shell" key={pathname}>
         {children}

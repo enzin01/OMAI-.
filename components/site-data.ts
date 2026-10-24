@@ -1,7 +1,6 @@
 import {
   ArrowRight,
   BriefcaseBusiness,
-  CheckCircle2,
   Clock3,
   Eye,
   HelpCircle,

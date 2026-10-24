@@ -1,11 +1,16 @@
+import { pageMetadata } from "@/lib/seo";
+import { PageSeo } from "@/components/PageSeo";
 import { FinalCall, PageHero, SectionIntro } from "@/components/PagePieces";
 import { SiteChrome } from "@/components/SiteChrome";
 import { faqItems } from "@/components/site-data";
+
+export const metadata = pageMetadata("/duvidas");
 
 export default function QuestionsPage() {
   return (
     <SiteChrome>
       <main>
+        <PageSeo path="/duvidas" />
         <PageHero
           eyebrow="Dúvidas"
           title="Perguntas que todo dono de negócio faz antes de investir em um site."

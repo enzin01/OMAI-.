@@ -1,0 +1,17 @@
+{
+  "url": "https://omai-agencia.vercel.app",
+  "name": "OMAI",
+  "language": "pt-BR",
+  "locale": "pt_BR",
+  "telephone": "+5511995512411",
+  "pages": [
+    {"path":"/","label":"Início","title":"Criação de sites profissionais para empresas","description":"A OMAI cria sites claros, bonitos e confiáveis para empresas. Conheça os serviços, veja exemplos de projetos e converse pelo WhatsApp.","type":"WebPage","index":true},
+    {"path":"/por-que-ter-um-site","label":"Por que ter um site","title":"Por que sua empresa precisa de um site?","description":"Entenda como um site profissional organiza as informações da sua empresa, transmite confiança e facilita o contato dos clientes.","type":"WebPage","index":true},
+    {"path":"/servicos","label":"Serviços","title":"Serviços de criação de sites e presença digital","description":"Conheça os serviços da OMAI para apresentar sua empresa na internet com mensagem clara, visual profissional e caminhos simples para o contato.","type":"CollectionPage","index":true},
+    {"path":"/projetos","label":"Projetos","title":"Projetos e exemplos de sites profissionais","description":"Veja exemplos visuais de sites e comparações de antes e depois para entender como uma apresentação clara muda a percepção de uma empresa.","type":"CollectionPage","index":true,"image":"/assets/compartilhar-projetos.jpg"},
+    {"path":"/como-funciona","label":"Como funciona","title":"Como funciona a criação do seu site","description":"Conheça o processo da OMAI: conversa inicial, organização da mensagem, criação visual, montagem do site e orientação para a entrega.","type":"WebPage","index":true},
+    {"path":"/briefing","label":"Briefing","title":"Briefing para criação de site personalizado","description":"Preencha o briefing da OMAI para organizar as informações, os objetivos, a identidade visual e as funcionalidades do seu site personalizado.","type":"WebPage","index":false},
+    {"path":"/duvidas","label":"Dúvidas","title":"Dúvidas sobre sites profissionais para empresas","description":"Tire dúvidas sobre ter um site, sua relação com o Instagram, a apresentação dos serviços e o caminho para conversar com a OMAI.","type":"FAQPage","index":true},
+    {"path":"/contato","label":"Contato","title":"Fale com a OMAI pelo WhatsApp","description":"Converse com a OMAI pelo WhatsApp para explicar seu negócio, tirar dúvidas sobre a criação de um site e pedir um orçamento sem compromisso.","type":"ContactPage","index":true}
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "/assets/digital-foundation-hero.png": {
+    "stem": "/assets/digital-foundation-hero",
+    "widths": [
+      640,
+      960,
+      1440
+    ]
+  },
+  "/assets/project-commerce.png": {
+    "stem": "/assets/project-commerce",
+    "widths": [
+      640,
+      960,
+      1440
+    ]
+  },
+  "/assets/project-saas.png": {
+    "stem": "/assets/project-saas",
+    "widths": [
+      640,
+      960,
+      1440
+    ]
+  },
+  "/assets/project-brand.png": {
+    "stem": "/assets/project-brand",
+    "widths": [
+      640,
+      960,
+      1440
+    ]
+  },
+  "/assets/before.png": {
+    "stem": "/assets/before",
+    "widths": [
+      640,
+      960,
+      1440
+    ]
+  },
+  "/assets/after.png": {
+    "stem": "/assets/after",
+    "widths": [
+      640,
+      960,
+      1440
+    ]
+  }
+}

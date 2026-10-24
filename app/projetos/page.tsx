@@ -1,12 +1,17 @@
+import { pageMetadata } from "@/lib/seo";
+import { PageSeo } from "@/components/PageSeo";
 import Image from "next/image";
 import { FinalCall, PageHero, SectionIntro } from "@/components/PagePieces";
 import { SiteChrome } from "@/components/SiteChrome";
 import { projects } from "@/components/site-data";
 
+export const metadata = pageMetadata("/projetos");
+
 export default function ProjectsPage() {
   return (
     <SiteChrome>
       <main>
+        <PageSeo path="/projetos" />
         <PageHero
           eyebrow="Projetos"
           title="O visual certo muda a forma como o cliente enxerga sua empresa."
@@ -27,7 +32,7 @@ export default function ProjectsPage() {
                 </div>
                 <div className="project-content">
                   <span>{project.tag}</span>
-                  <h2>{project.title}</h2>
+                  <h3>{project.title}</h3>
                   <p>{project.text}</p>
                 </div>
               </article>

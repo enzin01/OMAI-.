@@ -6089,10 +6089,11 @@ body {
 .whatsapp-float::before {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 8%;
-  width: 24%;
-  height: 24%;
+  left: -14%;
+  top: 50%;
+  width: 28%;
+  height: 28%;
+  transform: translateY(-50%);
   background: #25d366;
   clip-path: polygon(0 50%, 100% 0, 100% 100%);
 }

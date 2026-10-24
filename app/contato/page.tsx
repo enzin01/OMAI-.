@@ -1,12 +1,17 @@
+import { pageMetadata } from "@/lib/seo";
+import { PageSeo } from "@/components/PageSeo";
 import { MessageCircle } from "lucide-react";
 import { FinalCall, PageHero, SectionIntro } from "@/components/PagePieces";
 import { SiteChrome } from "@/components/SiteChrome";
 import { whatsappUrl } from "@/components/site-data";
 
+export const metadata = pageMetadata("/contato");
+
 export default function ContactPage() {
   return (
     <SiteChrome>
       <main>
+        <PageSeo path="/contato" />
         <PageHero
           eyebrow="Contato"
           title="Vamos entender o que seu negócio precisa para parecer mais confiável online."
@@ -18,7 +23,7 @@ export default function ContactPage() {
           <SectionIntro
             eyebrow="WhatsApp"
             title="Clique, envie a mensagem pronta e comece sem complicação."
-            text="Número oficial: 1199551-2411."
+            text="Número oficial: (11) 99551-2411."
           />
           <a className="big-contact-card reveal" href={whatsappUrl} target="_blank" rel="noreferrer">
             <MessageCircle size={34} aria-hidden="true" />

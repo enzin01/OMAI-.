@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/seo";
+import { PageSeo } from "@/components/PageSeo";
 import { FinalCall, InternalLinkCard, PageHero, SectionIntro } from "@/components/PagePieces";
 import { SiteChrome } from "@/components/SiteChrome";
 
@@ -20,10 +22,13 @@ const changes = [
   }
 ];
 
+export const metadata = pageMetadata("/por-que-ter-um-site");
+
 export default function WhyPage() {
   return (
     <SiteChrome>
       <main>
+        <PageSeo path="/por-que-ter-um-site" />
         <PageHero
           eyebrow="Por que ter um site"
           title="Porque confiança começa antes da primeira conversa."
@@ -39,7 +44,7 @@ export default function WhyPage() {
           <div className="statement-grid">
             {changes.map((item, index) => (
               <article className="statement-card reveal" key={item.title} style={{ transitionDelay: `${index * 70}ms` }}>
-                <h2>{item.title}</h2>
+                <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </article>
             ))}

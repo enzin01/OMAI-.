@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Bolt, MessageCircle, Star, Target, TrendingUp, UsersRound, Zap } from "lucide-react";
+import { ArrowUpRight, Bolt, MessageCircle, Target, TrendingUp, UsersRound, Zap } from "lucide-react";
 import { FinalCall, SectionIntro } from "@/components/PagePieces";
 import { SiteChrome } from "@/components/SiteChrome";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { homeBenefits, pageLinks, whatsappUrl, whyCards } from "@/components/site-data";
 
 const testimonials = [
@@ -227,42 +228,7 @@ export default function Home() {
             <p className="eyebrow">Depoimentos</p>
             <h2 id="testimonials-title">O que negócios como o seu podem sentir quando a presença digital fica clara.</h2>
           </div>
-          <div className="testimonial-viewport">
-            <div className="testimonial-track" aria-label="Depoimentos fictícios da OMAI">
-              {testimonials.map((item, index) => (
-                <article className="testimonial-card reveal" key={item.name} style={{ transitionDelay: `${index * 70}ms` }}>
-                  <div className="testimonial-top">
-                    <strong>{item.name}</strong>
-                    <Image className="google-mark" src="/assets/google-review-icon.png" alt="Google" width={25} height={25} />
-                  </div>
-                  <div className="testimonial-stars" aria-label="5 estrelas">
-                    {Array.from({ length: 5 }, (_, star) => (
-                      <Star key={star} size={17} fill="currentColor" aria-hidden="true" />
-                    ))}
-                    <Image className="verified-mark" src="/assets/verified-review-icon.png" alt="Verificado" width={17} height={17} />
-                  </div>
-                  <p>{item.text}</p>
-                  <small>Leia mais</small>
-                </article>
-              ))}
-              {testimonials.map((item) => (
-                <article className="testimonial-card" key={`${item.name}-loop`} aria-hidden="true">
-                  <div className="testimonial-top">
-                    <strong>{item.name}</strong>
-                    <Image className="google-mark" src="/assets/google-review-icon.png" alt="" width={25} height={25} />
-                  </div>
-                  <div className="testimonial-stars" aria-hidden="true">
-                    {Array.from({ length: 5 }, (_, star) => (
-                      <Star key={star} size={17} fill="currentColor" aria-hidden="true" />
-                    ))}
-                    <Image className="verified-mark" src="/assets/verified-review-icon.png" alt="" width={17} height={17} />
-                  </div>
-                  <p>{item.text}</p>
-                  <small>Leia mais</small>
-                </article>
-              ))}
-            </div>
-          </div>
+          <TestimonialCarousel testimonials={testimonials} />
         </section>
 
         <FinalCall />

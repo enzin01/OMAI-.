@@ -1,11 +1,16 @@
+import { pageMetadata } from "@/lib/seo";
+import { PageSeo } from "@/components/PageSeo";
 import { FinalCall, PageHero, SectionIntro } from "@/components/PagePieces";
 import { SiteChrome } from "@/components/SiteChrome";
 import { processSteps } from "@/components/site-data";
+
+export const metadata = pageMetadata("/como-funciona");
 
 export default function ProcessPage() {
   return (
     <SiteChrome>
       <main>
+        <PageSeo path="/como-funciona" />
         <PageHero
           eyebrow="Como funciona"
           title="Um processo simples para tirar sua presença digital do improviso."
@@ -23,7 +28,7 @@ export default function ProcessPage() {
               <article className="timeline-item reveal" key={item.step} style={{ transitionDelay: `${index * 70}ms` }}>
                 <span>{item.step}</span>
                 <div>
-                  <h2>{item.title}</h2>
+                  <h3>{item.title}</h3>
                   <p>{item.text}</p>
                 </div>
               </article>

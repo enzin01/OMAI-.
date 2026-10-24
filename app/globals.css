@@ -6089,13 +6089,13 @@ body {
 .whatsapp-float::before {
   content: "";
   position: absolute;
-  left: -14%;
+  right: -14%;
   top: 50%;
   width: 28%;
   height: 28%;
   transform: translateY(-50%);
   background: #25d366;
-  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
 }
 
 .whatsapp-float:hover {

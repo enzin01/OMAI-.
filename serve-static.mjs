@@ -14,12 +14,21 @@ const types = {
   ".jpg": "image/jpeg",
   ".webp": "image/webp",
   ".svg": "image/svg+xml",
-  ".ico": "image/x-icon"
+  ".ico": "image/x-icon",
+  ".txt": "text/plain; charset=utf-8",
+  ".xml": "application/xml; charset=utf-8",
+  ".json": "application/json; charset=utf-8",
+  ".webmanifest": "application/manifest+json; charset=utf-8"
 };
 
 createServer(async (request, response) => {
   try {
     const url = new URL(request.url || "/", `http://${request.headers.host || "localhost"}`);
+    if (url.pathname !== "/" && url.pathname.endsWith("/")) {
+      response.writeHead(308, { Location: `${url.pathname.slice(0, -1)}${url.search}` });
+      response.end();
+      return;
+    }
     const pathname = url.pathname === "/" ? "/index.html" : decodeURIComponent(url.pathname);
     let filePath = path.normalize(path.join(root, pathname));
 
@@ -51,8 +60,8 @@ createServer(async (request, response) => {
     });
     response.end(file);
   } catch {
-    response.writeHead(404);
-    response.end("Not found");
+    response.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
+    response.end(await readFile(path.join(root, "404.html")));
   }
 }).listen(port, "127.0.0.1", () => {
   console.log(`OMAI on http://127.0.0.1:${port}`);

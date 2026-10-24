@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate-seo.mjs && next build",
     "start": "next start",
     "preview": "node serve-static.mjs",
-    "lint": "next lint"
+    "lint": "eslint app components lib --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test:seo": "node --test scripts/seo.test.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

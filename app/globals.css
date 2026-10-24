@@ -6068,7 +6068,7 @@ body {
   text-shadow: none;
 }
 
-/* Solid WhatsApp speech bubble, anchored in the same position. */
+/* Reference-shaped WhatsApp symbol, anchored in the same position. */
 .whatsapp-float {
   position: fixed;
   right: max(20px, env(safe-area-inset-right));
@@ -6081,21 +6081,8 @@ body {
   border: 0;
   border-radius: 50%;
   color: #fff;
-  background: #25d366;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+  background: none;
   transition: transform 180ms ease;
-}
-
-.whatsapp-float::before {
-  content: "";
-  position: absolute;
-  right: -14%;
-  top: 50%;
-  width: 28%;
-  height: 28%;
-  transform: translateY(-50%);
-  background: #25d366;
-  clip-path: polygon(100% 50%, 0 0, 0 100%);
 }
 
 .whatsapp-float:hover {
@@ -6112,13 +6099,18 @@ body {
 }
 
 .whatsapp-mark {
-  width: 38px;
-  height: 38px;
+  display: block;
+  width: 100%;
+  height: 100%;
   fill: none;
   stroke: currentColor;
-  stroke-width: 2;
+  stroke-width: 2.2;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.whatsapp-bubble {
+  fill: #25d366;
 }
 
 .whatsapp-mark path:last-child {
@@ -6142,10 +6134,6 @@ body {
     height: 58px;
   }
 
-  .whatsapp-mark {
-    width: 32px;
-    height: 32px;
-  }
 }
 
 /* Gemini reference reconstruction: first-answer and question-section only */

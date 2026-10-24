@@ -195,7 +195,7 @@ export function TestimonialCarousel({ testimonials }: { testimonials: Testimonia
                 <Image unoptimized className="verified-mark" src="/assets/verified-review-icon-transparent.webp" alt={copy === 1 ? "Verificado" : ""} width={17} height={17} draggable={false} />
               </div>
               <p>{item.text}</p>
-              <small>Leia mais</small>
+              <small>Exemplo ilustrativo</small>
             </article>
           )))}
         </div>

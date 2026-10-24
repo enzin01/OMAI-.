@@ -1,10 +1,12 @@
+import { pageMetadata } from "@/lib/seo";
+import { PageSeo } from "@/components/PageSeo";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Bolt, MessageCircle, Target, TrendingUp, UsersRound, Zap } from "lucide-react";
-import { FinalCall, SectionIntro } from "@/components/PagePieces";
+import { FinalCall } from "@/components/PagePieces";
 import { SiteChrome } from "@/components/SiteChrome";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-import { homeBenefits, pageLinks, whatsappUrl, whyCards } from "@/components/site-data";
+import { homeBenefits, whatsappUrl, whyCards } from "@/components/site-data";
 
 const testimonials = [
   {
@@ -33,10 +35,13 @@ const testimonials = [
   }
 ];
 
+export const metadata = pageMetadata("/");
+
 export default function Home() {
   return (
     <SiteChrome>
       <main id="top">
+        <PageSeo path="/" />
         <section className="hero short-hero" aria-labelledby="hero-title">
           <Image
             className="hero-image"
@@ -44,6 +49,7 @@ export default function Home() {
             alt="Presença digital premium para empresas"
             fill
             priority
+            fetchPriority="high"
             sizes="100vw"
           />
           <div className="hero-overlay" />
@@ -51,9 +57,9 @@ export default function Home() {
 
           <div className="hero-content compact">
             <h1 id="hero-title" className="hero-title">
-              <span>Sua empresa</span>
-              <span>precisa ser</span>
-              <span>entendida em</span>
+              <span>Sua empresa</span>{" "}
+              <span>precisa ser</span>{" "}
+              <span>entendida em</span>{" "}
               <span>segundos.</span>
             </h1>
             <p className="hero-subtitle">
@@ -194,7 +200,7 @@ export default function Home() {
                 <article className="benefit-card reveal" key={item.title} style={{ transitionDelay: `${index * 80}ms` }}>
                   <Icon size={26} aria-hidden="true" />
                   {index === 1 ? <MessageCircle className="benefit-whatsapp-cue" size={20} aria-hidden="true" /> : null}
-                  <h2>{item.title}</h2>
+                  <h3>{item.title}</h3>
                   <p>{item.text}</p>
                   {index === 1 ? <span className="card-progress" aria-hidden="true" /> : null}
                 </article>
@@ -214,7 +220,7 @@ export default function Home() {
               return (
                 <article className="answer-card reveal" key={item.question} style={{ transitionDelay: `${index * 80}ms` }}>
                   <Icon size={24} aria-hidden="true" />
-                  <h2>{item.question}</h2>
+                  <h3>{item.question}</h3>
                   <p>{item.answer}</p>
                   <span className="card-progress" aria-hidden="true" />
                 </article>
@@ -228,6 +234,7 @@ export default function Home() {
             <p className="eyebrow">Depoimentos</p>
             <h2 id="testimonials-title">O que negócios como o seu podem sentir quando a presença digital fica clara.</h2>
           </div>
+          <p className="testimonial-note">Depoimentos ilustrativos: nomes e situações fictícios.</p>
           <TestimonialCarousel testimonials={testimonials} />
         </section>
 

@@ -1333,10 +1333,6 @@ h1 {
     display: none;
   }
 
-  .brand span:last-child {
-    display: none;
-  }
-
   .hero {
     min-height: 100svh;
     padding: 108px 20px 68px;
@@ -6030,12 +6026,6 @@ body::after {
   filter: drop-shadow(0 0 10px rgba(var(--accent-rgb), 0.42));
 }
 
-.brand > span:last-child {
-  color: var(--white);
-  -webkit-text-fill-color: var(--white);
-  text-shadow: 0 1px 14px rgba(112, 112, 120, 0.18);
-}
-
 @media (max-width: 900px) {
   .brand-logo-wrap {
     width: 54px;
@@ -6089,11 +6079,22 @@ body {
   width: 72px;
   height: 72px;
   border: 0;
-  border-radius: 50% 50% 50% 8px;
+  border-radius: 50%;
   color: #fff;
   background: #25d366;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
   transition: transform 180ms ease;
+}
+
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8%;
+  width: 24%;
+  height: 24%;
+  background: #25d366;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
 }
 
 .whatsapp-float:hover {
